@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spark - thymeleaf
+    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.4'
+    implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.2.RELEASE'
+    // jboss
+    implementation group: 'org.jboss.weld.se', name: 'weld-se-core', version: '5.0.1.Final'
+    // log4j
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.36'
+    // jackson
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.13.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.3'
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    // RestTemplate
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.21'
+
+}
+
+sourceSets {
+    main {
+        output.resourcesDir = file("${buildDir}/classes/java/main")
+    }
+}
