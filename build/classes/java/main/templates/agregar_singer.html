@@ -16,16 +16,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/singers">Listar Singer</a>
+                    <a class="nav-link" href="/api/singers">Listar Singer</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/singer/nuevo">Agregar Singer</a>
+                    <a class="nav-link" href="/api/singer/nuevo">Agregar Singer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/albums">Listar Album</a>
+                    <a class="nav-link" href="/api/albums">Listar Album</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/album/nuevo">Agregar Album</a>
+                    <a class="nav-link" href="/api/album/nuevo">Agregar Album</a>
                 </li>
             </ul>
         </div>
@@ -35,7 +35,7 @@
             <div class="col-lg6 col-md-6 col-sm-6 container justify-content-center">
                 <h1 class="text-center mt-5">Agregar Singer</h1>
                 <div class="card-body">
-                    <form th:action="@{/singers}" th:object="${singer}" method="POST">
+                    <form th:action="@{api/singers}" th:object="${singer}" method="POST">
                         <div class="form-group">
                             <label for="firsName">First Name</label>
                             <input type="text" class="form-control" id="firsName" th:field="*{first_name}" name="firsName"/>
