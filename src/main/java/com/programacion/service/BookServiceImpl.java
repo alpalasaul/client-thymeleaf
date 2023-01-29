@@ -15,7 +15,7 @@ import static org.springframework.http.HttpMethod.GET;
 public class BookServiceImpl implements BookService {
 
 //    private static final String URL = "http://localhost:8080/rest02/api/v1/album";
-    private static final String URL = "http://localhost:8080/api/book";
+    private static final String URL = "http://localhost:8080/book";
 
     @Inject
     private RestTemplate restTemplate;

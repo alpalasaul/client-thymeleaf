@@ -1,18 +1,14 @@
 package com.programacion.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book implements Serializable {
-    private static final Long serialVersionUID = 1L;
+public class Book {
+//    private static final Long serialVersionUID = 1L;
     private int id;
     private String isbn;
 //    private Author author;

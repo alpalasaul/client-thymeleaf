@@ -46,16 +46,16 @@ public class BookController {
 
             get("/book/editar/:id", (req, res) -> {
 
-                var book = bookService.findById(req.params(":id"));
+                Book book = bookService.findById(req.params(":id"));
 
-                var model = new HashMap<String, Object>();
-                model.put("album", new Book(1, "ac", "sd", 2.2));
+                Map<String, Object> model = new HashMap<>();
+//                model.put("album", new Book(1, "ac", "sd", 2.2));
                 model.put("book", book);
-                model.put("saludo", "Holaaa");
-                model.put("book1", new Book(1, "ac", "sd", 2.2));
+                model.put("title", "Holaaa");
+//                model.put("book1", new Book(1, "ac", "sd", 2.2));
 
 //                return render(model, "agregarBook");
-                return new ThymeleafTemplateEngine().render(new ModelAndView(model, "agregarBook"));
+                return new ThymeleafTemplateEngine().render(new ModelAndView(model, "editar_book"));
             });
 
             post("/book/editar/:id", (req, res) -> {
